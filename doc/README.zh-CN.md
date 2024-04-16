@@ -44,7 +44,7 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
 
 您是否曾经玩过或见过刮刮卡，刮开卡片以显示隐藏的内容。
 
-查看 [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/com/fleey/toggle/ToggleEffectBox.kt)
+查看 [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt)
 文件，这里隐藏了背后的秘密。
 
 我使用 Canvas 来绘制内容，并使用 ClipPath 来剪切内容。

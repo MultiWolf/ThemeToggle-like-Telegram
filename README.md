@@ -47,7 +47,7 @@ In face, no magic here, it's easy to understand.
 Have you ever played or seen scratch cards? You scratch the card to reveal the hidden content.
 
 So, in this project,
-look [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/com/fleey/toggle/ToggleEffectBox.kt)
+look [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt)
 file, this hides the magic behind it.
 
 I use `Canvas` to draw the content, and I use `ClipPath` to clip the content.
