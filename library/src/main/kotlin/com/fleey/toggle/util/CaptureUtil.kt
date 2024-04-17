@@ -20,9 +20,7 @@ import androidx.compose.ui.ImageComposeScene
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.window.WindowState
-import java.awt.Point
-import java.awt.Rectangle
-import java.awt.Robot
+import java.awt.*
 
 /**
  * Use singleton object to capture the window as an image and reduce the memory usage.
@@ -45,15 +43,25 @@ internal object CaptureUtil {
    * @param position the position of the window.
    * @param windowState the window state.
    * @param marginBar the margin bar to cover the window, e.g. 28 for macOS, 0 for CustomWindow.
+   * @param hideCursor whether to hide the cursor when capturing.
    * @return the [ImageBitmap](captured image).
    */
   fun captureWindowAsImage(
     position: Point,
     windowState: WindowState,
-    marginBar: Int
+    marginBar: Int,
+    hideCursor: Boolean = true
   ): ImageBitmap {
     val width = windowState.size.width.value.toInt()
     val height = windowState.size.height.value.toInt() - marginBar
+    
+    /**
+     * Move the cursor to a position that is not visible, I use a stinky number to move it out of the screen.
+     * Use [MouseInfo.getPointerInfo] to get the current position.
+     */
+    val moveDistance = 114514
+    val screenSize = Toolkit.getDefaultToolkit().screenSize
+    val originMousePosition = MouseInfo.getPointerInfo().location
     
     /**
      * Create a rectangle to capture the window.
@@ -65,6 +73,18 @@ internal object CaptureUtil {
       height
     )
     
-    return robot.createScreenCapture(captureRect).toComposeImageBitmap()
+    try {
+      if (hideCursor) robot.mouseMove(
+        screenSize.width + moveDistance,
+        screenSize.height + moveDistance
+      )
+      
+      return robot.createScreenCapture(captureRect).toComposeImageBitmap()
+    } finally {
+      /**
+       * Move the cursor back to the original position.
+       */
+      if (hideCursor) robot.mouseMove(originMousePosition.x, originMousePosition.y)
+    }
   }
 }
