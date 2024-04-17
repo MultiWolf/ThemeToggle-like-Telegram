@@ -28,7 +28,7 @@ fun main() = application {
    * The `rememberWindowState` function is used to remember the state of the window.
    * The `size` parameter is used to set the initial size of the window.
    */
-  val windowState = rememberWindowState(size = DpSize(420.dp, 720.dp))
+  val windowState = rememberWindowState(size = DpSize(480.dp, 720.dp))
   Window(
     state = windowState,
     onCloseRequest = ::exitApplication,

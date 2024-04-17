@@ -12,7 +12,10 @@ recently, so I decided to replicate it.
 
 # Preview
 
-![preview](./image/shot.gif)
+
+| ![shot-1](./image/shot-1.gif) | ![shot-2](./image/shot-2.gif) | ![shot-3](./image/shot-3.gif) |
+|:-----------------------------:|:-----------------------------:|:-----------------------------:|
+|  Custom Window<br/>(with ui)  |  System Window<br/>(with ui)  |   System Window<br/>(no ui)   |
 
 # Structure
 
