@@ -17,8 +17,8 @@ recently, so I decided to replicate it.
 # Structure
 
 - ThemeToggle-like-Telegram
-    - [library]() - The core library that contains the `ToggleEffectBox` and `CaptureUtil`.
-    - [sample]() - A sample project that demonstrates how to use the `ToggleEffectBox`.
+    - [library](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/library) - The core library that contains the [ToggleEffectBox](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt) and [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt).
+    - [sample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/sample) - A sample to show how to use.
 
 # Getting Started
 
@@ -53,18 +53,15 @@ In face, no magic here, it's easy to understand.
 Have you ever played or seen scratch cards? You scratch the card to reveal the hidden content.
 
 So, in this project,
-look [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt)
+look [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt)
 file, this hides the magic behind it.
 
 I use `Canvas` to draw the content, and I use `ClipPath` to clip the content.
 
 When the user clicks on the toggle:
 
--
-
-Use [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/util/CaptureUtil)
+- Use [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt)
 to capture the window as an image.
-
 - Start an animation (which is non-linear) that assists the `ClipPath` with a dynamic value
   of `animProgress` to calculate it's `radius`.
 - Draw the `ClipPath` with the calculated `radius` to clip the content.

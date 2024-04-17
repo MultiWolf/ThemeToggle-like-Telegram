@@ -48,7 +48,6 @@ import kotlin.math.sqrt
  * @param animDurationMillis the animation duration in milliseconds.
  * @param animEasing the animation easing.
  * @param modifier the modifier.
- * @sample com.fleey.sample.SampleApp
  * @see captureWindowAsImage
  */
 @Composable

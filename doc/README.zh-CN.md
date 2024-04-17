@@ -12,6 +12,12 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
 
 ![preview](../image/shot.gif)
 
+# 结构
+
+- ThemeToggle-like-Telegram
+   - [library](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/library) - 包含了 [ToggleEffectBox](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt) 和 [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt) 的核心模块。
+   - [sample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/sample) - 丢一个使用示例。
+
 # 起步
 
 1. 克隆仓库
@@ -42,11 +48,11 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
    > - 在项目根目录下执行该命令
    >
    > - 来到项目 `sample` 模块执行：
-       >  ```sh
-   >  ./gradlew :run
-   >  ```
-       >
-       >  希望对你有所帮助！
+     >  ```sh
+     >  ./gradlew :run
+     >  ```
+   >
+   >  希望对你有所帮助！
 
 如果您不习惯使用命令行界面，您也可以从 Gradle 工具窗口运行。
 
@@ -58,7 +64,7 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
 
 您是否曾经玩过或见过刮刮卡，刮开卡片以显示隐藏的内容。
 
-查看 [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt)
+查看 [ToggleEffectBox.kt](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt)
 文件，这里隐藏了背后的秘密。
 
 我使用 Canvas 来绘制内容，并使用 ClipPath 来剪切内容。
@@ -67,7 +73,7 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
 
 -
 
-使用 [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/util/CaptureUtil)
+使用 [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt)
 捕获窗口为图像。
 
 - 启动一个非线性的动画，该动画协助 `ClipPath` 根据动态值 `animProgress` 计算其 `radius`。
