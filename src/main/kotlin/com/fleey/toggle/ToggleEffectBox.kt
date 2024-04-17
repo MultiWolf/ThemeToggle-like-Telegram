@@ -23,19 +23,19 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.*
-import androidx.compose.ui.ImageComposeScene
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.awt.ComposeWindow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
-import androidx.compose.ui.graphics.*
+import androidx.compose.ui.graphics.ClipOp
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.window.WindowState
-import kotlinx.coroutines.launch
+import com.fleey.sample.util.CaptureUtil.captureWindowAsImage
 import java.awt.Point
-import java.awt.Rectangle
-import java.awt.Robot
 import kotlin.math.sqrt
 
 /**
@@ -43,13 +43,13 @@ import kotlin.math.sqrt
  * @param isDark the dark mode state.
  * @param window the window to capture.
  * @param windowState the window state, use it to get the window size, then capture the window.
- * @param coverMarginBar the margin bar to cover the window, e.g. 28 for macOS, 0 for CustomWindow.
+ * @param coverMarginBar the margin bar to cover the window, e.g. about 28 for macOS, 0 for CustomWindow.
  * @param triggerPosition the trigger position to start the effect.
  * @param animDurationMillis the animation duration in milliseconds.
  * @param animEasing the animation easing.
  * @param modifier the modifier.
  * @sample com.fleey.sample.SampleApp
- * @see captureScreenAsImage
+ * @see captureWindowAsImage
  */
 @Composable
 fun ToggleEffectBox(
@@ -73,7 +73,6 @@ fun ToggleEffectBox(
    * cover is used to store the captured image.
    */
   var cover by remember { mutableStateOf<ImageBitmap?>(null) }
-  val scope = rememberCoroutineScope()
   
   /**
    * triggerCount is used to trigger control the animation,
@@ -108,13 +107,11 @@ fun ToggleEffectBox(
    */
   LaunchedEffect(isDark) {
     if (isDarkMode != isDark) {
-      scope.launch {
-        isDarkMode = isDark
-        cover =
-          captureScreenAsImage(window.location, windowState, coverMarginBar)
-        triggerCount++
-        triggerAnim = true
-      }
+      isDarkMode = isDark
+      cover =
+        captureWindowAsImage(window.location, windowState, coverMarginBar)
+      triggerCount++
+      triggerAnim = true
     }
   }
   
@@ -158,36 +155,4 @@ fun ToggleEffectBox(
       }
     }
   }
-}
-
-/**
- * Capture the screen as an image.
- * You can also use [ImageComposeScene] to capture all @Composable as an image,
- * but I'm not sure if it can capture the window, and I'm lazy to test it.
- * If you try it, please let me know the result, thanks!
- * @param position the position of the window.
- * @param windowState the window state.
- * @param coverMarginBar the margin bar to cover the window, e.g. 28 for macOS.
- * @return the captured image.
- */
-fun captureScreenAsImage(
-  position: Point,
-  windowState: WindowState,
-  coverMarginBar: Int
-): ImageBitmap {
-  /**
-   * Create a rectangle to capture the screen.
-   */
-  val captureRect =
-    Rectangle(
-      position.x,
-      position.y + coverMarginBar,
-      windowState.size.width.value.toInt(),
-      windowState.size.height.value.toInt() - coverMarginBar
-    )
-  
-  /**
-   * Use [Robot] to capture the screen.
-   */
-  return Robot().createScreenCapture(captureRect).toComposeImageBitmap()
 }

@@ -85,7 +85,7 @@ fun SampleApp(
     }
     /**
      * You should put this codes below others, so it can be drawn on top of them.
-     * And I set the coverMarginBar to 28, because the system(macOS) window bar height is 28.
+     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
      * You can change it by your system's top bar height.
      */
     ToggleEffectBox(
@@ -197,7 +197,7 @@ fun SampleContent(
     
     Column(
       modifier = Modifier.fillMaxWidth(),
-      verticalArrangement = Arrangement.spacedBy(2.dp),
+      verticalArrangement = Arrangement.spacedBy(3.dp),
     ) {
       msgList.forEach { MsgItem(it) }
     }
