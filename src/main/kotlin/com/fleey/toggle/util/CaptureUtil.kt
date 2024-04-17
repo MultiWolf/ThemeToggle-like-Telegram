@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fleey.sample.util
+package com.fleey.toggle.util
 
 import androidx.compose.ui.ImageComposeScene
 import androidx.compose.ui.graphics.ImageBitmap

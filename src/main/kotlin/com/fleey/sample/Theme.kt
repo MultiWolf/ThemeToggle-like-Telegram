@@ -23,6 +23,9 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
+/**
+ * Only for the sample app.
+ */
 @Composable
 fun AppTheme(
   isDark: Boolean = isSystemInDarkTheme(),

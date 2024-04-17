@@ -78,10 +78,8 @@ fun SampleApp(
   LaunchedEffect(Unit) { onAddToggleCount() }
   
   AppTheme(isDark) {
-    Box(Modifier.fillMaxSize()) {
-      SampleScaffold(isDark, toggleTheme, onUpdateTriggerPosition, onAddToggleCount) {
-        SampleContent(msgList)
-      }
+    SampleScaffold(isDark, toggleTheme, onUpdateTriggerPosition, onAddToggleCount) {
+      SampleContent(msgList)
     }
     /**
      * You should put this codes below others, so it can be drawn on top of them.

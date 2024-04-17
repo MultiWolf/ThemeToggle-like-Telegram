@@ -51,7 +51,9 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
 
 当用户点击切换时：
 
-- 使用 `captureScreenAsImage()` 函数捕获窗口为图像。
+-
+使用 [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/util/CaptureUtil)
+捕获窗口为图像。
 
 - 启动一个非线性的动画，该动画协助 `ClipPath` 根据动态值 `animProgress` 计算其 `radius`。
 

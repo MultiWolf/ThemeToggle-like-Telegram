@@ -54,9 +54,11 @@ I use `Canvas` to draw the content, and I use `ClipPath` to clip the content.
 
 When the user clicks on the toggle:
 
-- Use `captureScreenAsImage()` function to capture the window as an image.
+-
+Use [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/util/CaptureUtil)
+to capture the window as an image.
 - Start an animation (which is non-linear) that assists the `ClipPath` with a dynamic value
-  of `animProgress` to calculate its' `radius`.
+  of `animProgress` to calculate it's `radius`.
 - Draw the `ClipPath` with the calculated `radius` to clip the content.
 - Draw the captured image on the `Canvas` to reveal the hidden content.
 - Repeat the process when the user clicks on the toggle again (but it'll change the animation
@@ -69,7 +71,6 @@ If you have any suggestions or improvements, please let me know.
 And if you like it, please give it a star ⭐️, Thank you ❤️.
 
 # License
--------
 
     Copyright (c) 2024-present. Fleey
 

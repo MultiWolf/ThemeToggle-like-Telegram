@@ -34,7 +34,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.window.WindowState
-import com.fleey.sample.util.CaptureUtil.captureWindowAsImage
+import com.fleey.toggle.util.CaptureUtil.captureWindowAsImage
 import java.awt.Point
 import kotlin.math.sqrt
 
