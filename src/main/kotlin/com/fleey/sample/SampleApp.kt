@@ -75,6 +75,8 @@ fun SampleApp(
     toggleCount++
   }
   
+  LaunchedEffect(Unit) { onAddToggleCount() }
+  
   AppTheme(isDark) {
     Box(Modifier.fillMaxSize()) {
       SampleScaffold(isDark, toggleTheme, onUpdateTriggerPosition, onAddToggleCount) {
@@ -244,9 +246,9 @@ private fun getMsg(toggleCount: Int): Msg {
     8 -> Msg("So, you're not going to stop, are you?")
     9 -> Msg("I'm done with you. I'm out of here!")
     10 -> Msg("However you click, I won't respond. I'm leaving!")
-    16 -> Msg("Why are you still here? I've already left!")
+    16 -> Msg("Why are you still here? I've already left!", Color.Magenta)
     24 -> Msg("I'm not here. I'm not here. I'm not here.", Color.Green)
-    32 -> Msg("You're so boring, I'll let the system close the window for you.", Color.Red)
+    32 -> Msg("You're so boring, I'll let the system close the window for you!", Color.Red)
     else -> Msg("Goodbye!")
   }
 }
