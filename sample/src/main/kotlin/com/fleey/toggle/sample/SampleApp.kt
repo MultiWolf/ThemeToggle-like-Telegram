@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fleey.sample
+package com.fleey.toggle.sample
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -81,6 +81,21 @@ fun SampleApp(
     SampleScaffold(isDark, toggleTheme, onUpdateTriggerPosition, onAddToggleCount) {
       SampleContent(msgList)
     }
+    /**
+     * You should put this codes below others, so it can be drawn on top of them.
+     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
+     * You can change it by your system's top bar height.
+     */
+    /**
+     * You should put this codes below others, so it can be drawn on top of them.
+     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
+     * You can change it by your system's top bar height.
+     */
+    /**
+     * You should put this codes below others, so it can be drawn on top of them.
+     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
+     * You can change it by your system's top bar height.
+     */
     /**
      * You should put this codes below others, so it can be drawn on top of them.
      * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.

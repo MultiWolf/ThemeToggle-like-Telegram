@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fleey.sample
+package com.fleey.toggle.sample
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

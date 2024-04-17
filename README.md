@@ -14,6 +14,12 @@ recently, so I decided to replicate it.
 
 ![preview](./image/shot.gif)
 
+# Structure
+
+- ThemeToggle-like-Telegram
+    - [library]() - The core library that contains the `ToggleEffectBox` and `CaptureUtil`.
+    - [sample]() - A sample project that demonstrates how to use the `ToggleEffectBox`.
+
 # Getting Started
 
 1. Clone the repository
@@ -33,7 +39,7 @@ recently, so I decided to replicate it.
    Run the project using
 
    ```sh
-   ./gradlew :run
+   ./gradlew sample:run
    ```
 
    If you are not a CLI person, you can run it from Gradle Tool window
@@ -55,8 +61,10 @@ I use `Canvas` to draw the content, and I use `ClipPath` to clip the content.
 When the user clicks on the toggle:
 
 -
+
 Use [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/src/main/kotlin/com/fleey/toggle/util/CaptureUtil)
 to capture the window as an image.
+
 - Start an animation (which is non-linear) that assists the `ClipPath` with a dynamic value
   of `animProgress` to calculate it's `radius`.
 - Draw the `ClipPath` with the calculated `radius` to clip the content.

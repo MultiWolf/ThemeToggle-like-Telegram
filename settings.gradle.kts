@@ -13,3 +13,5 @@ pluginManagement {
 }
 
 rootProject.name = "ThemeToggle-like-Telegram"
+include("library")
+include("sample")
