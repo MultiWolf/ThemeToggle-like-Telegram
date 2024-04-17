@@ -56,6 +56,9 @@ fun SampleApp(
    */
   var triggerPosition by remember { mutableStateOf(Offset.Zero) }
   
+  /**
+   * when isDark changed, [ToggleEffectBox] will be triggered to show the effect.
+   */
   val toggleTheme = { isDark = !isDark }
   
   /**
@@ -81,21 +84,6 @@ fun SampleApp(
     SampleScaffold(isDark, toggleTheme, onUpdateTriggerPosition, onAddToggleCount) {
       SampleContent(msgList)
     }
-    /**
-     * You should put this codes below others, so it can be drawn on top of them.
-     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
-     * You can change it by your system's top bar height.
-     */
-    /**
-     * You should put this codes below others, so it can be drawn on top of them.
-     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
-     * You can change it by your system's top bar height.
-     */
-    /**
-     * You should put this codes below others, so it can be drawn on top of them.
-     * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.
-     * You can change it by your system's top bar height.
-     */
     /**
      * You should put this codes below others, so it can be drawn on top of them.
      * And I set the coverMarginBar to 28, because the system(macOS) window bar height about 28.

@@ -15,9 +15,10 @@ Telegram 在任何平台上的动画一直都非常出色，我特别喜欢它�
 # 结构
 
 - ThemeToggle-like-Telegram
-   - [library](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/library) - 包含了 [ToggleEffectBox](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt) 和 [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt) 的核心模块。
-   - [sample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/sample) - 丢一个使用示例。
-
+   - [library](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/library) - 包含了 [ToggleEffectBox](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt) 和 [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt) 的核心模块
+   - [sample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/sample) - 示例模块
+     - [SampleApp](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/sample/src/main/kotlin/com/fleey/toggle/sample/SampleApp.kt) - (推荐)默认示例
+     - [SimpleSample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/sample/src/main/kotlin/com/fleey/toggle/sample/SimpleSample.kt) - 更为简单的示例
 # 起步
 
 1. 克隆仓库

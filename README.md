@@ -19,6 +19,8 @@ recently, so I decided to replicate it.
 - ThemeToggle-like-Telegram
     - [library](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/library) - The core library that contains the [ToggleEffectBox](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/ToggleEffectBox.kt) and [CaptureUtil](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/library/src/main/kotlin/com/fleey/toggle/util/CaptureUtil.kt).
     - [sample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/tree/main/sample) - A sample to show how to use.
+      - [SampleApp](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/sample/src/main/kotlin/com/fleey/toggle/sample/SampleApp.kt) - (recommended) Default Sample
+      - [SimpleSample](https://github.com/MultiWolf/ThemeToggle-like-Telegram/blob/main/sample/src/main/kotlin/com/fleey/toggle/sample/SimpleSample.kt) - Simple Sample
 
 # Getting Started
 

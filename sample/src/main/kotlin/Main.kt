@@ -20,6 +20,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import com.fleey.toggle.sample.SampleApp
+import com.fleey.toggle.sample.SimpleSample
 
 fun main() = application {
   /**
@@ -34,8 +35,11 @@ fun main() = application {
     title = "Theme Toggle"
   ) {
     /**
-     * Call the `SampleApp` composable function to display the sample app.
+     * Call the `SampleApp` or `SimpleSample` composable to display.
+     * @see [SampleApp]
+     * @see [SimpleSample]
      */
     SampleApp(window, windowState)
+    // SimpleSample(window, windowState)
   }
 }
